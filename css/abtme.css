@@ -1,7 +1,11 @@
-:root { 
-  font-family: bebas neue; 
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('fonts/BebasNeue-Regular.ttf') format('truetype');
 }
 
+:root { 
+    font-family: "Bebas Neue"; 
+}
 nav {
   display: flex;
   justify-content: space-around;

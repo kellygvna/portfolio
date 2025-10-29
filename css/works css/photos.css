@@ -1,6 +1,12 @@
-:root { 
-    font-family: bebas neue; 
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../fonts/BebasNeue-Regular.ttf);
 }
+
+:root { 
+    font-family: "Bebas Neue"; 
+}
+
 
 nav {
     display: flex;

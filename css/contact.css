@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
 :root { 
-    font-family: bebas neue; 
+    font-family: "Bebas Neue"; 
 }
 
 nav {
