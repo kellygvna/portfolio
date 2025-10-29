@@ -1,0 +1,295 @@
+:root { 
+    font-family: bebas neue; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 20px 0px;
+    font-size: 20px;
+    gap: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#title{
+    text-align: start;
+    padding-right: 20%;
+    color: black;
+    white-space: nowrap; 
+    flex-shrink: 0; 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    text-align: end;
+}
+
+#souscat :hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Project Page Styles */
+.project-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.project-title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #FF6B6B;
+}
+
+.project-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.7;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    padding: 8px 20px;
+    background: #FF6B6B;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Video Section */
+.video-section {
+    margin-bottom: 100px;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(255, 107, 107, 0.2);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Logo Section - SIMPLE */
+.logo-section {
+    margin-bottom: 100px;
+}
+
+.logo-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo-simple {
+    background: white;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Pas de hover */
+}
+
+.logo-simple img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+}
+
+.logo-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #FF6B6B;
+}
+
+.logo-details p {
+    line-height: 1.6;
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+/* Merch Section - 2 T-SHIRTS */
+.merch-section {
+    margin-bottom: 100px;
+}
+
+.merch-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.merch-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.merch-item:hover {
+    transform: translateY(-5px);
+}
+
+.merch-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Posters Section - VERTICAUX */
+.posters-section {
+    margin-bottom: 100px;
+}
+
+.posters-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.posters-vertical {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.poster-vertical {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.poster-vertical:hover {
+    transform: translateY(-5px);
+}
+
+.poster-vertical img {
+    width: 100%;
+    height: auto; /* Hauteur automatique pour voir tout le poster */
+    display: block;
+}
+
+/* Navigation */
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.nav-btn {
+    padding: 12px 30px;
+    border: 2px solid #FF6B6B;
+    color: #FF6B6B;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+.nav-btn:hover {
+    background: #FF6B6B;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-btn.next {
+    background: #FF6B6B;
+    color: white;
+}
+
+.nav-btn.next:hover {
+    background: white;
+    color: #FF6B6B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2.5rem;
+    }
+    
+    .logo-showcase {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .merch-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .logo-simple {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .project-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .logo-simple img {
+        max-height: 100px;
+    }
+}

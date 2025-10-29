@@ -1,0 +1,296 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+:root { 
+    font-family: "Bebas Neue"; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 20px 0px;
+    font-size: 20px;
+    gap: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#title{
+    text-align: start;
+    padding-right: 20%;
+    color: black;
+    white-space: nowrap; 
+    flex-shrink: 0; 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    text-align: end;
+}
+
+#souscat :hover {
+    text-decoration: underline;
+    text-decoration: color(black);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour la page Works */
+.works-container {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding: 40px 20px;
+}
+
+.works-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+    color: black;
+}
+
+/* Grille simple */
+.projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Cartes de projet avec couleurs de l'accueil */
+.project-card {
+    display: block;
+    padding: 60px 40px;
+    text-decoration: none;
+    color: black;
+    background: white;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Couleurs spécifiques pour chaque projet */
+.project-card:nth-child(1) {
+    border-color: #FF6B6B;
+}
+.project-card:nth-child(1):hover {
+    background: #FF6B6B;
+    color: white;
+}
+
+.project-card:nth-child(2) {
+    border-color: #4ECDC4;
+}
+.project-card:nth-child(2):hover {
+    background: #4ECDC4;
+    color: white;
+}
+
+.project-card:nth-child(3) {
+    border-color: #45B7D1;
+}
+.project-card:nth-child(3):hover {
+    background: #45B7D1;
+    color: white;
+}
+
+.project-card:nth-child(4) {
+    border-color: #96CEB4;
+}
+.project-card:nth-child(4):hover {
+    background: #96CEB4;
+    color: white;
+}
+
+.project-card:nth-child(5) {
+    border-color: #FFEAA7;
+}
+.project-card:nth-child(5):hover {
+    background: #FFEAA7;
+    color: black;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.project-content {
+    position: relative;
+    z-index: 2;
+}
+
+.project-number {
+    font-size: 4rem;
+    opacity: 0.1;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-number {
+    opacity: 0.2;
+    color: inherit;
+}
+
+.project-name {
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-name {
+    color: inherit;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    opacity: 0.6;
+    color: black;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-description {
+    opacity: 0.9;
+    color: inherit;
+}
+
+/* Background animé avec couleur */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover::before {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(45deg, rgba(255,255,255,0.2), transparent);
+}
+
+/* Indicateur de lien */
+.project-card::after {
+  
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover::after {
+    opacity: 0.7;
+    transform: translateY(-50%) translateX(10px);
+}
+
+/* Éléments décoratifs discrets */
+.works-container::before {
+    content: '';
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: #FF6B6B;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.05;
+    top: 10%;
+    left: 5%;
+    z-index: -1;
+}
+
+.works-container::after {
+    content: '';
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    background: #4ECDC4;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.05;
+    bottom: 20%;
+    right: 8%;
+    z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .works-container {
+        padding: 20px;
+    }
+    
+    .works-title {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+    
+    .project-card {
+        padding: 40px 20px;
+    }
+    
+    .project-name {
+        font-size: 2rem;
+    }
+    
+    .project-number {
+        font-size: 3rem;
+    }
+    
+    .project-card::after {
+        display: none;
+    }
+    
+    .works-container::before,
+    .works-container::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .works-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .project-name {
+        font-size: 1.8rem;
+    }
+    
+    .project-number {
+        font-size: 2.5rem;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+    }
+}

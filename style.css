@@ -1,0 +1,285 @@
+:root {
+    font-family: bebas neue;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 20px 0px;
+    font-size: 20px;
+    gap: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#title {
+    text-align: start;
+    padding-right: 20%;
+    color: black;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: end;
+}
+
+#souscat :hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Page d'accueil */
+.home-container {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.main-title {
+    margin-bottom: 60px;
+}
+
+.title-name {
+    font-size: 7rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    margin: 0 0 40px 0;
+    color: black;
+    line-height: 0.9;
+    min-height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#typing-text {
+    display: inline-block;
+}
+
+/* Boutons pour le sous-titre */
+.title-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.subtitle-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid;
+}
+
+.subtitle-btn.creative {
+    background: #4ECDC4;
+    color: black;
+    border-color: #4ECDC4;
+}
+
+.subtitle-btn.creative:hover {
+    background: white;
+    color: #4ECDC4;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+.subtitle-btn.paris {
+    background: #FFEAA7;
+    color: black;
+    border-color: #FFEAA7;
+}
+
+.subtitle-btn.paris:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 234, 167, 0.4);
+}
+
+.subtitle-btn.job {
+    background: #96CEB4;
+    color: black;
+    border-color: #96CEB4;
+}
+
+.subtitle-btn.job:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 234, 167, 0.4);
+}
+
+/* Bouton d'action principal */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-width: 250px;
+}
+
+.action-btn.primary {
+    background: #FF6B6B;
+    color: white;
+    border-color: #FF6B6B;
+}
+
+.action-btn.primary:hover {
+    background: white;
+    color: #FF6B6B;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+}
+
+.btn-arrow {
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+.action-btn.primary:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* Effet de vague sur le bouton principal */
+.action-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.action-btn:hover::before {
+    left: 100%;
+}
+
+.deco-element {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.08;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .title-name {
+        font-size: 5rem;
+        min-height: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-name {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        min-height: 5rem;
+    }
+    
+    .title-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .subtitle-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .action-btn {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        min-width: 200px;
+    }
+    
+    .deco-element {
+        display: none;
+    }
+}
+/* Effet de vague */
+.wave-letter {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+    animation-delay: calc(var(--delay) * 1s);
+    white-space: pre; /* Préserve les espaces */
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-3px);
+    }
+}
+
+.wave-active .wave-letter {
+    animation-play-state: running;
+}
+
+@media (max-width: 480px) {
+    .title-name {
+        font-size: 3rem;
+        min-height: 4rem;
+    }
+    
+    .subtitle-btn {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .action-buttons {
+        gap: 15px;
+    }
+    
+    .action-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+}

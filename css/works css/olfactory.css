@@ -1,0 +1,222 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+:root { 
+    font-family: "Bebas Neue"; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 20px 0px;
+    font-size: 20px;
+    gap: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#title{
+    text-align: start;
+    padding-right: 20%;
+    color: black;
+    white-space: nowrap; 
+    flex-shrink: 0; 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    text-align: end;
+}
+
+#souscat :hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Project Page Styles */
+.project-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.project-title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    color: #45B7D1;
+    opacity: 0.7;
+}
+
+/* Coming Soon Content */
+.coming-soon-content {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.coming-soon-icon {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.coming-soon-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.coming-soon-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* Bouton d'action */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+.action-btn.primary {
+    background: #45B7D1;
+    color: white;
+    border-color: #45B7D1;
+}
+
+.action-btn.primary:hover {
+    background: white;
+    color: #45B7D1;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(78, 205, 196, 0.3);
+}
+
+.btn-arrow {
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+.action-btn.primary:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* Navigation */
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.nav-btn {
+    padding: 12px 30px;
+    border: 2px solid#45B7D1;
+    color:#45B7D1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+.nav-btn:hover {
+    background: #45B7D1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-btn.next {
+    background: #45B7D1;
+    color: white;
+}
+
+.nav-btn.next:hover {
+    background: white;
+    color:#45B7D1
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2.5rem;
+    }
+    
+    .coming-soon-title {
+        font-size: 2rem;
+    }
+    
+    .coming-soon-icon {
+        font-size: 3rem;
+    }
+    
+    .project-navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-btn {
+        text-align: center;
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .coming-soon-title {
+        font-size: 1.5rem;
+    }
+    
+    .coming-soon-text {
+        font-size: 1rem;
+    }
+    
+    .action-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+}

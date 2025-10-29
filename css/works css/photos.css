@@ -1,0 +1,166 @@
+:root { 
+    font-family: bebas neue; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 20px 0px;
+    font-size: 20px;
+    gap: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#title{
+    text-align: start;
+    padding-right: 20%;
+    color: black;
+    white-space: nowrap; 
+    flex-shrink: 0; 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    text-align: end;
+}
+
+#souscat :hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Project Page Styles */
+.project-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.project-title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #4ECDC4;
+}
+
+.project-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.7;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* Photos Section - Sans bordures */
+.photos-section {
+    margin-bottom: 100px;
+}
+
+.photos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.photo-item {
+    width: 100%;
+    max-width: 900px;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: scale(1.01);
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Navigation */
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.nav-btn {
+    padding: 12px 30px;
+    border: 2px solid #4ECDC4;
+    color: #4ECDC4;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+.nav-btn:hover {
+    background: #4ECDC4;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-btn.next {
+    background: #4ECDC4;
+    color: white;
+}
+
+.nav-btn.next:hover {
+    background: white;
+    color: #4ECDC4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2.5rem;
+    }
+    
+    .project-navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-btn {
+        text-align: center;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .photos-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .project-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .photos-grid {
+        gap: 25px;
+    }
+}
