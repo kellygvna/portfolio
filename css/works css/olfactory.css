@@ -1,11 +1,12 @@
 @font-face {
     font-family: "Bebas Neue";
-    src: url(../fonts/BebasNeue-Regular.ttf);
+    src: url('https://kellygvna.github.io/portfolio/fonts/BebasNeue-Regular.ttf') format('truetype');
 }
 
-:root { 
-    font-family: "Bebas Neue"; 
+body {
+    font-family: "Bebas Neue";
 }
+
 
 nav {
     display: flex;
