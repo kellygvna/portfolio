@@ -5,13 +5,13 @@
     url('https://fonts.gstatic.com/s/bebasneue/v2/JTUSjIg69CK48gW7PXoo9Wlhzw.woff2') format('woff2');
 =======
     url('https://fonts.gstatic.com/s/bebasneue/v2/JTUSjIg69CK48gW7PXoo9Wlhzw.woff2') format('woff2');
->>>>>>> 4ab3535efcdcf189daaa5024cd93d65fb0c47102
+>>>>>>> 4ab3535efcdcf189daaa5024cd93d65fb0c47102;
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
     font-family: "Bebas Neue";
-    font-weight: normal;
-    font-style: normal;
 }
 
 nav {
